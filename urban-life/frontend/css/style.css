@@ -426,4 +426,32 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+/* =========================
+   CARROSSEL – FIX MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 48px 16px;
+  }
+
+  .hero-carousel {
+    width: 100%;
+  }
+
+  .carousel {
+    width: 100%;
+    max-width: 100%;
+    height: 220px; /* MAIS BAIXO, MAIS BONITO */
+    border-radius: 18px;
+  }
+
+  .slide {
+    object-fit: cover;
+  }
+
+  .carousel-indicadores {
+    margin-top: 12px;
+  }
+}
 
