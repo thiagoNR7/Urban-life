@@ -2,29 +2,42 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Urban Life</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
+ <nav class="navbar">
   <div class="nav-left">
-    <img src="./imgs/logo.png" alt="Urban Life" class="logo-nav" />
+    <img src="./imgs/logo.png" class="logo-nav" alt="Urban Life" />
   </div>
 
-  <ul class="menu">
-    <li>Como funciona</li>
-    <li>Produtos</li>
-    <li>Produtores</li>
-    <li>Sobre</li>
+  <ul class="menu desktop">
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#produtos">Produtos</a></li>
+    <li><a href="#produtores">Produtores</a></li>
   </ul>
 
-  <div class="nav-actions">
-    <button class="btn-outline">Entrar</button>
-    <button class="btn-solid">Começar</button>
-  </div>
+  <button class="btn-nav desktop">Entrar</button>
+
+  <!-- Botão hambúrguer (mobile) -->
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<!-- Menu mobile -->
+<div class="menu-mobile" id="menu-mobile">
+  <a href="#como-funciona">Como funciona</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#produtores">Produtores</a>
+  <button class="btn-nav">Entrar</button>
+</div>
+
 
 
   <!-- HERO -->

@@ -63,3 +63,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+// ================================
+// NAVBAR MOBILE
+// ================================
+const hamburger = document.getElementById("hamburger");
+const menuMobile = document.getElementById("menu-mobile");
+
+if (hamburger && menuMobile) {
+  hamburger.addEventListener("click", () => {
+    menuMobile.classList.toggle("ativo");
+  });
+
+  // Fecha o menu ao clicar em qualquer link
+  menuMobile.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("click", () => {
+      menuMobile.classList.remove("ativo");
+    });
+  });
+}
+

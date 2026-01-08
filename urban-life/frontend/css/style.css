@@ -4,6 +4,15 @@
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
 }
+button {
+  background: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 :root {
   --verde: #1b5e20;
@@ -305,6 +314,86 @@
   .carousel {
     max-width: 300px;
     height: 300px;
+  }
+}
+/* =========================
+   NAVBAR MOBILE
+========================= */
+
+.desktop {
+  display: flex;
+}
+
+.hamburger {
+  display: none;
+  width: 32px;
+  height: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+
+/* Menu mobile overlay */
+.menu-mobile {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 31, 20, 0.96);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+  z-index: 999;
+}
+
+.menu-mobile.ativo {
+  transform: translateY(0);
+}
+
+.menu-mobile a {
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.menu-mobile .btn-nav {
+  margin-top: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+/* =========================
+   FIX DEFINITIVO NAVBAR MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .menu.desktop,
+  .btn-nav.desktop {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: flex !important;
   }
 }
 
