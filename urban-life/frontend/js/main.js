@@ -1,46 +1,65 @@
-// ================================
-// CARROSSEL AUTOMÁTICO (0.9s)
-// ================================
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+document.addEventListener("DOMContentLoaded", () => {
 
-let index = 0;
+  // ================================
+  // CARROSSEL AUTOMÁTICO (0.9s)
+  // ================================
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
 
-function mostrarSlide(i) {
-  slides.forEach(slide => slide.classList.remove("ativo"));
-  dots.forEach(dot => dot.classList.remove("ativo"));
+  let index = 0;
 
-  slides[i].classList.add("ativo");
-  dots[i].classList.add("ativo");
-}
+  function mostrarSlide(i) {
+    slides.forEach(slide => slide.classList.remove("ativo"));
+    dots.forEach(dot => dot.classList.remove("ativo"));
 
-setInterval(() => {
-  index = (index + 1) % slides.length;
-  mostrarSlide(index);
-}, 900);
+    slides[i].classList.add("ativo");
+    dots[i].classList.add("ativo");
+  }
 
-// ================================
-// PRODUTOS (DEMO)
-// ================================
-const produtos = [
-  { nome: "Tomate Orgânico", preco: 8.9 },
-  { nome: "Alface Crespa", preco: 4.5 },
-  { nome: "Cenoura Baby", preco: 6.2 }
-];
+  if (slides.length > 0) {
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      mostrarSlide(index);
+    }, 900);
+  }
 
-const listaProdutos = document.getElementById("lista-produtos");
+  // ================================
+  // PRODUTOS (DEMO)
+  // ================================
+  const produtos = [
+    { nome: "Tomate Orgânico", preco: 8.9 },
+    { nome: "Alface Crespa", preco: 4.5 },
+    { nome: "Cenoura Baby", preco: 6.2 }
+  ];
 
-if (listaProdutos) {
-  produtos.forEach(produto => {
-    const card = document.createElement("div");
-    card.className = "card-produto";
+  const listaProdutos = document.getElementById("lista-produtos");
 
-    card.innerHTML = `
-      <h4>${produto.nome}</h4>
-      <p>R$ ${produto.preco}</p>
-      <button>Reservar</button>
-    `;
+  if (listaProdutos) {
+    produtos.forEach(produto => {
+      const card = document.createElement("div");
+      card.className = "card-produto";
 
-    listaProdutos.appendChild(card);
-  });
-}
+      card.innerHTML = `
+        <h4>${produto.nome}</h4>
+        <p>R$ ${produto.preco}</p>
+        <button>Reservar</button>
+      `;
+
+      listaProdutos.appendChild(card);
+    });
+  }
+
+  // ================================
+  // CTA HERO → SCROLL SUAVE
+  // ================================
+  const btnHero = document.getElementById("btn-hero");
+
+  if (btnHero) {
+    btnHero.addEventListener("click", () => {
+      document.getElementById("produtos").scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  }
+
+});
