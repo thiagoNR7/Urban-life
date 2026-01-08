@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ================================
   const slides = document.querySelectorAll(".slide");
   const dots = document.querySelectorAll(".dot");
-
   let index = 0;
 
   function mostrarSlide(i) {
@@ -39,14 +38,39 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.className = "card-produto";
 
+      const botao = document.createElement("button");
+      botao.textContent = "Reservar";
+
+      botao.addEventListener("click", () => {
+        botao.textContent = "Reservado ✓";
+        botao.classList.add("btn-reservado");
+        botao.disabled = true;
+
+        mostrarToast();
+      });
+
       card.innerHTML = `
         <h4>${produto.nome}</h4>
         <p>R$ ${produto.preco}</p>
-        <button>Reservar</button>
       `;
 
+      card.appendChild(botao);
       listaProdutos.appendChild(card);
     });
+  }
+
+  // ================================
+  // TOAST DE FEEDBACK
+  // ================================
+  function mostrarToast() {
+    const toast = document.getElementById("toast");
+    if (!toast) return;
+
+    toast.classList.add("mostrar");
+
+    setTimeout(() => {
+      toast.classList.remove("mostrar");
+    }, 2500);
   }
 
   // ================================
@@ -62,23 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-});
-// ================================
-// NAVBAR MOBILE
-// ================================
-const hamburger = document.getElementById("hamburger");
-const menuMobile = document.getElementById("menu-mobile");
+  // ================================
+  // NAVBAR MOBILE
+  // ================================
+  const hamburger = document.getElementById("hamburger");
+  const menuMobile = document.getElementById("menu-mobile");
 
-if (hamburger && menuMobile) {
-  hamburger.addEventListener("click", () => {
-    menuMobile.classList.toggle("ativo");
-  });
-
-  // Fecha o menu ao clicar em qualquer link
-  menuMobile.querySelectorAll("a, button").forEach(el => {
-    el.addEventListener("click", () => {
-      menuMobile.classList.remove("ativo");
+  if (hamburger && menuMobile) {
+    hamburger.addEventListener("click", () => {
+      menuMobile.classList.toggle("ativo");
     });
-  });
-}
 
+    menuMobile.querySelectorAll("a, button").forEach(el => {
+      el.addEventListener("click", () => {
+        menuMobile.classList.remove("ativo");
+      });
+    });
+  }
+
+});
