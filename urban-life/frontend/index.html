@@ -54,8 +54,6 @@
         </button>
       </div>
 
-     
-
       <!-- CARROSSEL -->
       <div class="hero-carousel">
         <div class="carousel">
@@ -71,45 +69,93 @@
         </div>
       </div>
     </section>
- <section class="secao como-funciona" id="como-funciona">
-  <h2>Como funciona</h2>
-  <p class="subtitulo">
-    Do produtor urbano até a sua mesa, de forma simples e sustentável.
-  </p>
-  <div class="animacao-frete">
-  <span class="colheita">🏡</span>
-  <span class="caminhao">🚚</span>
-  <span class="cliente">🌱</span>
-</div>
+    <section class="secao como-funciona" id="como-funciona">
+      <h2>Como funciona</h2>
+      <p class="subtitulo">
+        Do produtor urbano até a sua mesa, de forma simples e sustentável.
+      </p>
+      <div class="animacao-svg">
+        <!-- PLANTA -->
+        <svg class="icon plant" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 58V30" />
+          <path d="M32 30c-10 0-18-8-18-18 10 0 18 8 18 18z" />
+          <path d="M32 30c10 0 18-8 18-18-10 0-18 8-18 18z" />
+        </svg>
 
+        <!-- CAMINHÃO -->
+        <svg class="icon truck" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="2" y="26" width="36" height="18" rx="2" />
+          <rect x="38" y="30" width="16" height="14" rx="2" />
+          <circle cx="14" cy="46" r="4" />
+          <circle cx="42" cy="46" r="4" />
+        </svg>
 
-  <div class="passos">
-    <div class="passo">
-      <span class="numero">1</span>
-      <h3>Escolha seus produtos</h3>
-      <p>
-        Navegue por alimentos frescos cultivados por produtores urbanos locais.
+        <!-- CASA -->
+        <svg class="icon home" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M8 30L32 10l24 20" />
+          <path d="M16 28v26h32V28" />
+        </svg>
+      </div>
+
+      <div class="passos">
+        <div class="passo">
+          <span class="numero">1</span>
+          <h3>Escolha seus produtos</h3>
+          <p>
+            Navegue por alimentos frescos cultivados por produtores urbanos
+            locais.
+          </p>
+        </div>
+
+        <div class="passo">
+          <span class="numero">2</span>
+          <h3>Reserve com facilidade</h3>
+          <p>
+            Selecione os itens desejados e faça sua reserva em poucos cliques.
+          </p>
+        </div>
+
+        <div class="passo">
+          <span class="numero">3</span>
+          <h3>Receba com rapidez</h3>
+          <p>
+            Produtores preparam o pedido e a entrega acontece de forma ágil.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao produtores" id="produtores">
+      <h2>Nossos produtores urbanos</h2>
+      <p class="subtitulo">
+        Trabalhamos com pequenos produtores que cultivam alimentos frescos
+        dentro da cidade, de forma responsável e sustentável.
       </p>
 
-    </div>
+      <div class="grid-produtores">
+        <div class="card-produtor">
+          <img src="./imgs/produtor1.jpg" alt="Produtor urbano" />
+          <h3>Horta Vila Verde</h3>
+          <span>Zona Sul • São Paulo</span>
+          <p>Produção orgânica focada em hortaliças frescas e sazonais.</p>
+        </div>
 
-    <div class="passo">
-      <span class="numero">2</span>
-      <h3>Reserve com facilidade</h3>
-      <p>
-        Selecione os itens desejados e faça sua reserva em poucos cliques.
-      </p>
-    </div>
+        <div class="card-produtor">
+          <img src="./imgs/produtor2.jpg" alt="Produtor urbano" />
+          <h3>Raízes Urbanas</h3>
+          <span>Zona Oeste • São Paulo</span>
+          <p>Horta regenerativa com práticas sustentáveis e impacto local.</p>
+        </div>
 
-    <div class="passo">
-      <span class="numero">3</span>
-      <h3>Receba com rapidez</h3>
-      <p>
-        Produtores preparam o pedido e a entrega acontece de forma ágil.
-      </p>
-    </div>
-  </div>
-</section>
+        <div class="card-produtor">
+          <img src="./imgs/produtor3.jpg" alt="Produtor urbano" />
+          <h3>Prato Verde Sustentável</h3>
+          <span>Zona Norte • São Paulo</span>
+          <p>Produção local com foco em qualidade, frescor e proximidade.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- PRODUTOS -->
     <section class="secao" id="produtos">
       <h2>Produtos em Destaque</h2>
