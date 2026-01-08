@@ -480,5 +480,77 @@ a {
     padding: 96px 100px;
   }
 }
+/* =========================
+   COMO FUNCIONA
+========================= */
+
+.como-funciona {
+  background: #ffffff;
+  text-align: center;
+}
+
+.como-funciona h2 {
+  font-size: 2.4rem;
+  color: var(--verde);
+}
+
+.como-funciona .subtitulo {
+  margin: 12px auto 48px;
+  max-width: 520px;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.passos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.passo {
+  background: #fff;
+  padding: 32px 26px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.passo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+}
+
+.passo .numero {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #00c48c;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.passo h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--escuro);
+}
+
+.passo p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .passos {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
 
 
