@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Urban Life</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+  <div class="nav-left">
+    <img src="./imgs/logo.png" alt="Urban Life" class="logo-nav" />
+  </div>
+
+  <ul class="menu">
+    <li>Como funciona</li>
+    <li>Produtos</li>
+    <li>Produtores</li>
+    <li>Sobre</li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="btn-outline">Entrar</button>
+    <button class="btn-solid">Começar</button>
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-texto">
+      <h1>Sua Vida Mais Saudável com Urban Life</h1>
+      <p>Alimentos frescos, rastreáveis e direto de produtores urbanos.</p>
+      <button class="btn-principal btn-hero">Ver Produtos</button>
+    </div>
+
+    <!-- CARROSSEL -->
+    <div class="hero-carousel">
+      <div class="carousel">
+        <img src="./imgs/morango.jpg" class="slide ativo">
+        <img src="./imgs/tomate1.jpg" class="slide">
+        <img src="./imgs/verdura2.jpg" class="slide">
+      </div>
+
+      <div class="carousel-indicadores">
+        <span class="dot ativo"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="secao">
+    <h2>Produtos em Destaque</h2>
+    <div class="grid-produtos" id="lista-produtos"></div>
+  </section>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
