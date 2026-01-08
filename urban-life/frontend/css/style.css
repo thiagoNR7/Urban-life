@@ -552,5 +552,67 @@ a {
     gap: 24px;
   }
 }
+/* =========================
+   ANIMAÇÃO – COMO FUNCIONA
+========================= */
+
+.animacao-frete {
+  position: relative;
+  margin: 0 auto 48px;
+  max-width: 600px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+
+.colheita {
+  animation: pulsePlant 2.5s infinite ease-in-out;
+}
+
+.caminhao {
+  animation: moveTruck 3.5s infinite ease-in-out;
+}
+
+.cliente {
+  animation: pulseHome 2.5s infinite ease-in-out;
+}
+
+/* Caminhão se movendo */
+@keyframes moveTruck {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-10px);
+    opacity: 0.4;
+  }
+}
+
+/* Planta pulsando (colheita) */
+@keyframes pulsePlant {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* Casa pulsando (cliente) */
+@keyframes pulseHome {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
 
