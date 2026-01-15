@@ -1,99 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout | Urban Life</title>
-    <link rel="stylesheet" href="./css/checkout.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | Urban Life</title>
+  <link rel="stylesheet" href="./css/checkout.css" />
+</head>
+<body>
 
-    <!-- NAV -->
-    <nav class="checkout-nav">
-      <a href="./marketplace.html">← Voltar ao marketplace</a>
-      <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life" />
-    </nav>
+<nav class="checkout-nav">
+  <a href="./marketplace.html">← Voltar ao marketplace</a>
+  <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life" />
+</nav>
 
-    <!-- CONTAINER -->
-    <main class="checkout-container">
+<main class="checkout-container">
 
-      <!-- ESQUERDA: FORMULÁRIO -->
-      <section class="checkout-form">
-        <h1>Finalizar pedido</h1>
+  <!-- FORMULÁRIO -->
+  <section class="checkout-form">
+    <h1>Endereço de entrega</h1>
 
-        <!-- PROGRESSO -->
-        <div class="checkout-progress">
-          <div class="progress-step ativo">Endereço</div>
-          <div class="progress-step">Entrega</div>
-          <div class="progress-step">Confirmação</div>
-        </div>
-
-        <!-- ANIMAÇÃO -->
-        <div class="checkout-animacao">
-          <span class="icone">🌱</span>
-          <span class="linha"></span>
-          <span class="icone">🚲</span>
-          <span class="linha"></span>
-          <span class="icone">🏠</span>
-        </div>
-
-        <!-- FORMULÁRIO -->
-        <form id="checkout-form">
-          <input type="text" placeholder="Rua e número" required />
-          <input type="text" placeholder="Bairro" required />
-          <input type="text" placeholder="Cidade" required />
-          <input type="text" placeholder="CEP" required />
-
-          <button type="submit" class="btn-finalizar">
-            Continuar
-          </button>
-        </form>
-      </section>
-
-      <!-- DIREITA: RESUMO -->
-      <aside class="checkout-resumo">
-        <h3>Seu pedido</h3>
-
-        <ul id="resumo-itens">
-          <!-- preenchido via JS -->
-        </ul>
-
-        <strong>
-          Total: R$ <span id="resumo-total">0,00</span>
-        </strong>
-      </aside>
-
-    </main>
-
-    <!-- MODAL ENTREGA -->
-    <div class="modal-overlay" id="modal-entrega">
-      <div class="modal-box">
-        <h2>Entrega estimada 🚚</h2>
-
-        <p class="texto">
-          Com base no endereço informado, seu pedido chegará em:
-        </p>
-
-        <div class="tempo">
-          <span id="tempo-entrega">30</span>
-          <small>minutos</small>
-        </div>
-
-        <p class="aviso">
-          Estimativa baseada na proximidade dos produtores urbanos.
-        </p>
-
-        <div class="acoes">
-          <button id="editar-endereco" class="btn-secundario">
-            Editar endereço
-          </button>
-          <button id="confirmar-pedido" class="btn-confirmar">
-            Confirmar pedido
-          </button>
-        </div>
-      </div>
+    <div class="checkout-animacao">
+      <span>🌱</span><span class="linha"></span>
+      <span>🚲</span><span class="linha"></span>
+      <span>🏠</span>
     </div>
 
-    <script src="./js/checkout.js"></script>
-  </body>
+    <form id="form-endereco">
+      <input type="text" placeholder="Rua e número" required />
+      <input type="text" placeholder="Bairro" required />
+      <input type="text" placeholder="Cidade" required />
+      <input type="text" placeholder="CEP" required />
+
+      <button type="submit" class="btn-finalizar">
+        Confirmar endereço
+      </button>
+    </form>
+  </section>
+
+  <!-- RESUMO -->
+  <aside class="checkout-resumo">
+    <h3>Seu pedido</h3>
+    <ul id="resumo-itens"></ul>
+    <strong>Total: R$ <span id="resumo-total">0.00</span></strong>
+  </aside>
+
+</main>
+
+<script src="./js/checkout.js"></script>
+</body>
 </html>

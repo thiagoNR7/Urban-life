@@ -12,7 +12,7 @@ const cartBtn = document.getElementById("cart-btn");
 const btnFinalizar = document.getElementById("abrir-entrega");
 
 // -------------------------
-// ATUALIZAR CARRINHO
+// ATUALIZAR UI
 // -------------------------
 function atualizarCarrinho() {
   cartItems.innerHTML = "";
@@ -23,7 +23,14 @@ function atualizarCarrinho() {
 
     const li = document.createElement("li");
     li.innerHTML = `
-      <strong>${item.nome}</strong> x${item.qtd}
+      <div>
+        <strong>${item.nome}</strong>
+        <div>
+          <button data-i="${index}" data-a="menos">−</button>
+          <span>${item.qtd}</span>
+          <button data-i="${index}" data-a="mais">+</button>
+        </div>
+      </div>
       <span>R$ ${(item.preco * item.qtd).toFixed(2)}</span>
     `;
     cartItems.appendChild(li);
@@ -31,10 +38,14 @@ function atualizarCarrinho() {
 
   cartCount.innerText = cart.reduce((s, i) => s + i.qtd, 0);
   cartTotal.innerText = total.toFixed(2);
+
+  // salva para o checkout
+  localStorage.setItem("urbanlife_cart", JSON.stringify(cart));
 }
 
 // -------------------------
 // ADICIONAR PRODUTO
+// -------------------------
 document.querySelectorAll(".btn-card").forEach(btn => {
   btn.addEventListener("click", () => {
     const card = btn.closest(".produto-card");
@@ -52,10 +63,25 @@ document.querySelectorAll(".btn-card").forEach(btn => {
     }
 
     atualizarCarrinho();
-    // ❌ NÃO abre o carrinho automaticamente
   });
 });
 
+// -------------------------
+// + / -
+// -------------------------
+cartItems.addEventListener("click", e => {
+  const index = e.target.dataset.i;
+  const action = e.target.dataset.a;
+  if (!action) return;
+
+  if (action === "mais") cart[index].qtd++;
+  if (action === "menos") {
+    cart[index].qtd--;
+    if (cart[index].qtd === 0) cart.splice(index, 1);
+  }
+
+  atualizarCarrinho();
+});
 
 // -------------------------
 // ABRIR / FECHAR CARRINHO
@@ -73,9 +99,5 @@ btnFinalizar.addEventListener("click", () => {
     return;
   }
 
-  // guarda carrinho (opcional para o futuro)
-  localStorage.setItem("urbanlife_cart", JSON.stringify(cart));
-
-  // VAI PRO CHECKOUT
   window.location.href = "./checkout.html";
 });

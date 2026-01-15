@@ -1,69 +1,76 @@
-// ============================
-// CHECKOUT – RESUMO + ENTREGA
-// ============================
+// ===============================
+// CHECKOUT – URBAN LIFE
+// ===============================
 
-// SIMULA carrinho (depois liga com marketplace)
-const carrinho = JSON.parse(localStorage.getItem("urbanlife_cart")) || [
-  { nome: "Tomate Agroecológico", qtd: 2, preco: 12.5 },
-  { nome: "Geleia Artesanal", qtd: 1, preco: 18 }
-];
+// carrinho vindo do marketplace
+const cart = JSON.parse(localStorage.getItem("urbanlife_cart")) || [];
 
 const resumoItens = document.getElementById("resumo-itens");
 const resumoTotal = document.getElementById("resumo-total");
+const formEndereco = document.getElementById("form-endereco");
 
-const modal = document.getElementById("modal-entrega");
-const tempoEntrega = document.getElementById("tempo-entrega");
-
-const form = document.getElementById("checkout-form");
-const btnEditar = document.getElementById("editar-endereco");
-const btnConfirmar = document.getElementById("confirmar-pedido");
-
-// ----------------------------
-// RENDER RESUMO
-// ----------------------------
+// -------------------------------
+// RENDER RESUMO DO PEDIDO
+// -------------------------------
 function renderResumo() {
   resumoItens.innerHTML = "";
   let total = 0;
 
-  carrinho.forEach(item => {
+  if (cart.length === 0) {
+    resumoItens.innerHTML = "<li>Seu carrinho está vazio 🌱</li>";
+    resumoTotal.innerText = "0.00";
+    return;
+  }
+
+  cart.forEach(item => {
     total += item.preco * item.qtd;
 
     const li = document.createElement("li");
-    li.textContent = `${item.nome} x${item.qtd}`;
+    li.innerText = `${item.nome} x${item.qtd}`;
     resumoItens.appendChild(li);
   });
 
-  resumoTotal.textContent = total.toFixed(2);
+  resumoTotal.innerText = total.toFixed(2);
 }
 
-renderResumo();
-
-// ----------------------------
-// SUBMIT ENDEREÇO
-// ----------------------------
-form.addEventListener("submit", e => {
+// -------------------------------
+// SUBMIT DO ENDEREÇO
+// -------------------------------
+formEndereco.addEventListener("submit", e => {
   e.preventDefault();
 
-  // tempo fake (depois vira cálculo real)
-  const tempo = Math.floor(Math.random() * 10) + 25;
-  tempoEntrega.textContent = tempo;
+  if (cart.length === 0) {
+    alert("Seu carrinho está vazio 🌱");
+    return;
+  }
 
-  modal.classList.add("ativo");
-});
+  // salva endereço (simples, MVP)
+  const endereco = {
+    rua: formEndereco.querySelectorAll("input")[0].value,
+    bairro: formEndereco.querySelectorAll("input")[1].value,
+    cidade: formEndereco.querySelectorAll("input")[2].value,
+    cep: formEndereco.querySelectorAll("input")[3].value
+  };
 
-// ----------------------------
-// EDITAR
-// ----------------------------
-btnEditar.addEventListener("click", () => {
-  modal.classList.remove("ativo");
-});
+  localStorage.setItem("urbanlife_endereco", JSON.stringify(endereco));
 
-// ----------------------------
-// CONFIRMAR
-// ----------------------------
-btnConfirmar.addEventListener("click", () => {
-  modal.classList.remove("ativo");
-  localStorage.removeItem("urbanlife_cart");
-  alert("Pedido confirmado com sucesso 🌱");
-  window.location.href = "./index.html";
+  // 👉 próxima etapa
+  window.location.href = "./pagamento.html";
 });
+// =========================
+// MAPA – TEMPO DINÂMICO
+// =========================
+
+const tempo = Math.floor(Math.random() * 10) + 25;
+const infoTempo = document.querySelector(".entrega-info");
+
+if (infoTempo) {
+  infoTempo.innerHTML = `
+    <span>📍 Produtor a <strong>${(Math.random() * 3 + 1).toFixed(1)} km</strong></span>
+    <span>⏱️ Chega em cerca de <strong>${tempo} minutos</strong></span>
+  `;
+}
+
+
+// INIT
+renderResumo();

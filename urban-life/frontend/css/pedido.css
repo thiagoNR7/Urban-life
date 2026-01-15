@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f3faf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.pedido-container {
+  background: #fff;
+  padding: 48px 32px;
+  border-radius: 24px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.check-anim {
+  font-size: 3.2rem;
+  animation: pulse 1.6s ease-in-out infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+h1 {
+  color: #1b5e20;
+  margin-bottom: 8px;
+}
+
+.sub {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+.pedido-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  font-size: 0.9rem;
+}
+
+.pedido-info div {
+  background: #f6f6f6;
+  padding: 14px;
+  border-radius: 14px;
+  flex: 1;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  font-size: 0.8rem;
+}
+
+.status div {
+  opacity: 0.4;
+}
+
+.status .ativo {
+  opacity: 1;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+.btn-principal {
+  display: block;
+  background: linear-gradient(135deg,#00c48c,#1b5e20);
+  color: #fff;
+  padding: 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.voltar {
+  font-size: 0.85rem;
+  color: #555;
+  text-decoration: none;
+}

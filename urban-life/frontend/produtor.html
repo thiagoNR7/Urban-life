@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produtor | Urban Life</title>
+  <link rel="stylesheet" href="./css/produtor.css" />
+</head>
+<body>
+
+<nav class="produtor-nav">
+  <div class="nav-left">
+    <a href="./index.html" class="nav-back">← Voltar</a>
+  </div>
+
+  <div class="nav-center">
+    <img src="./imgs/WhatsApp Image 2026-01-15 at 10.08.56 (3).jpeg" alt="Produtor" class="nav-avatar">
+    <div class="nav-info">
+      <strong>Horta Vila Verde</strong>
+      <span class="status ativo">● Ativo agora</span>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <a href="#produtos" class="nav-link">Produtos</a>
+    <a href="#dashboard" class="nav-link destaque">Dashboard</a>
+  </div>
+</nav>
+
+
+<header class="produtor-header">
+  <img src="./imgs/Captura de tela 2026-01-15 191743.png" alt="Produtor">
+  <div>
+    <h2>Horta Vila Verde</h2>
+    <span class="status">🟢 Ativo agora</span>
+    <p>Zona Sul • São Paulo</p>
+  </div>
+</header>
+
+<main class="produtor-layout">
+
+  <!-- MAPA -->
+  <section class="produtor-mapa">
+    <h3>Localização da horta</h3>
+
+    <!-- MVP: mapa simples -->
+    <iframe 
+      src="https://www.google.com/maps?q=-23.6231,-46.6986&z=14&output=embed"
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="produtor-dashboard">
+    <h3>Resumo</h3>
+
+    <div class="dashboard-grid">
+      <div class="dash-card">
+        <strong>12</strong>
+        <span>Produtos ativos</span>
+      </div>
+
+      <div class="dash-card">
+        <strong>Tomate</strong>
+        <span>Mais vendido</span>
+      </div>
+
+      <div class="dash-card">
+        <strong>18</strong>
+        <span>Pedidos hoje</span>
+      </div>
+
+      <div class="dash-card">
+        <strong>4.8 ⭐</strong>
+        <span>Avaliação</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="./js/produtor.js"></script>
+</body>
+</html>

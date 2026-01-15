@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pedido confirmado | Urban Life</title>
+  <link rel="stylesheet" href="./css/pedido.css" />
+</head>
+<body>
+
+<main class="pedido-container">
+
+  <div class="check-anim">🌱</div>
+
+  <h1>Pedido confirmado!</h1>
+  <p class="sub">
+    Seu pedido já está sendo preparado por produtores urbanos próximos.
+  </p>
+
+  <div class="pedido-info">
+    <div>
+      <strong>Endereço</strong>
+      <span id="endereco">Carregando...</span>
+    </div>
+
+    <div>
+      <strong>Entrega estimada</strong>
+      <span><b id="tempo">—</b> minutos</span>
+    </div>
+  </div>
+
+  <div class="status">
+    <div class="ativo">🧺 Pedido recebido</div>
+    <div>🚲 Em rota</div>
+    <div>🏠 Entregue</div>
+  </div>
+
+  <a href="./pedido-status.html" class="btn-principal">
+    Acompanhar pedido
+  </a>
+
+  <a href="./index.html" class="voltar">
+    Voltar para Home
+  </a>
+
+</main>
+
+<script src="./js/pedido.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Status do Pedido | Urban Life</title>
+  <link rel="stylesheet" href="./css/pedido-status.css" />
+</head>
+<body>
+
+<nav class="status-nav">
+  <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life">
+</nav>
+
+<main class="status-container">
+
+  <h1>Seu pedido está a caminho 🌱</h1>
+  <p class="subtitulo">Acompanhe o status em tempo real</p>
+
+  <!-- MAPA FAKE -->
+  <div class="mapa">
+    <div class="rota">
+      <span class="ponto produtor">🧑‍🌾</span>
+      <span class="linha"></span>
+      <span class="ponto bike">🚲</span>
+      <span class="linha"></span>
+      <span class="ponto casa">🏠</span>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <ul class="timeline">
+    <li class="ativo">Pedido confirmado</li>
+    <li>Produtor preparando</li>
+    <li>Saiu para entrega</li>
+    <li>Entregue</li>
+  </ul>
+
+  <button id="acao-final" class="btn-final" disabled>
+    Aguardando entrega...
+  </button>
+
+</main>
+
+<script src="./js/pedido-status.js"></script>
+</body>
+</html>

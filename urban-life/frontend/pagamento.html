@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamento | Urban Life</title>
+  <link rel="stylesheet" href="./css/pagamento.css" />
+</head>
+<body>
+
+<nav class="checkout-nav">
+  <a href="./checkout.html">← Voltar</a>
+  <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life" />
+</nav>
+
+<main class="pagamento-container">
+
+  <h1>Escolha como pagar</h1>
+  <p class="sub">Pagamento seguro e rápido</p>
+
+  <!-- MÉTODOS -->
+  <div class="metodos">
+
+    <button class="metodo ativo" data-metodo="pix">
+      <span>⚡</span>
+      <strong>PIX</strong>
+      <small>Aprovação instantânea</small>
+    </button>
+
+    <button class="metodo" data-metodo="cartao">
+      <span>💳</span>
+      <strong>Cartão</strong>
+      <small>Crédito ou débito</small>
+    </button>
+
+  </div>
+
+  <!-- PIX -->
+  <div class="pagamento-box ativo" id="pix">
+    <p>Use o QR Code no seu app bancário</p>
+    <div class="pix-fake">QR CODE</div>
+  </div>
+
+  <!-- CARTÃO -->
+  <div class="pagamento-box" id="cartao">
+    <input type="text" placeholder="Número do cartão" />
+    <input type="text" placeholder="Nome impresso" />
+    <div class="linha">
+      <input type="text" placeholder="Validade" />
+      <input type="text" placeholder="CVV" />
+    </div>
+  </div>
+
+  <button id="confirmar-pagamento" class="btn-confirmar">
+    Confirmar pagamento
+  </button>
+
+</main>
+
+<script src="./js/pagamento.js"></script>
+</body>
+</html>

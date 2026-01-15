@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Avaliar Produtor | Urban Life</title>
+  <link rel="stylesheet" href="./css/avaliacao.css" />
+</head>
+<body>
+
+<nav class="avaliacao-nav">
+  <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life">
+</nav>
+
+<main class="avaliacao-container">
+
+  <h1>Como foi sua experiência? 🌱</h1>
+  <p class="subtitulo">
+    Sua avaliação ajuda produtores urbanos a crescerem.
+  </p>
+
+  <!-- PRODUTOR -->
+  <div class="produtor-card">
+    <img src="./imgs/produtor1.jpg" alt="Produtor">
+    <div>
+      <h3>Horta Vila Verde</h3>
+      <span>Zona Sul • São Paulo</span>
+    </div>
+  </div>
+
+  <!-- ESTRELAS -->
+  <div class="avaliacao-estrelas">
+    <span data-star="1">★</span>
+    <span data-star="2">★</span>
+    <span data-star="3">★</span>
+    <span data-star="4">★</span>
+    <span data-star="5">★</span>
+  </div>
+
+  <p id="nota-texto" class="nota-texto">
+    Toque nas estrelas para avaliar
+  </p>
+
+  <!-- COMENTÁRIO -->
+  <textarea
+    placeholder="Conte como foi sua experiência (opcional)"
+    rows="4"
+  ></textarea>
+
+  <button id="enviar-avaliacao" class="btn-enviar" disabled>
+    Enviar avaliação
+  </button>
+
+</main>
+
+<script src="./js/avaliacao.js"></script>
+</body>
+</html>

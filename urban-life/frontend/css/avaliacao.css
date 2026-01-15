@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f6faf7;
+  color: #1b1b1b;
+}
+
+/* NAV */
+.avaliacao-nav {
+  background: linear-gradient(90deg, #0f1f14, #1b5e20);
+  padding: 16px;
+  text-align: center;
+}
+
+.avaliacao-nav img {
+  height: 42px;
+}
+
+/* CONTAINER */
+.avaliacao-container {
+  max-width: 460px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.avaliacao-container h1 {
+  color: #1b5e20;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  color: #555;
+  margin-bottom: 28px;
+}
+
+/* PRODUTOR */
+.produtor-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.produtor-card img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.produtor-card h3 {
+  font-size: 1rem;
+}
+
+.produtor-card span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* ESTRELAS */
+.avaliacao-estrelas {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.avaliacao-estrelas span {
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.avaliacao-estrelas span.ativa {
+  color: #ffb703;
+}
+
+.avaliacao-estrelas span:hover {
+  transform: scale(1.1);
+}
+
+/* TEXTO NOTA */
+.nota-texto {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+/* TEXTO */
+textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  resize: none;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+/* BOTÃO */
+.btn-enviar {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #00c48c, #1b5e20);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-enviar:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,196,140,0.4);
+}
