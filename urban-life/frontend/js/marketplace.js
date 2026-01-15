@@ -35,7 +35,6 @@ function atualizarCarrinho() {
 
 // -------------------------
 // ADICIONAR PRODUTO
-// -------------------------
 document.querySelectorAll(".btn-card").forEach(btn => {
   btn.addEventListener("click", () => {
     const card = btn.closest(".produto-card");
@@ -53,9 +52,10 @@ document.querySelectorAll(".btn-card").forEach(btn => {
     }
 
     atualizarCarrinho();
-    cartDrawer.classList.add("ativo");
+    // ❌ NÃO abre o carrinho automaticamente
   });
 });
+
 
 // -------------------------
 // ABRIR / FECHAR CARRINHO
