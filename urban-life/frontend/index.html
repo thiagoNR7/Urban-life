@@ -49,9 +49,9 @@
           Conectamos você a produtores urbanos locais, com alimentos cultivados
           de forma sustentável e entregas rápidas.
         </p>
-        <button class="btn-principal btn-hero" id="btn-hero">
+        <a href="marketplace.html" class="btn-principal btn-hero">
           Ver produtos disponíveis
-        </button>
+        </a>
       </div>
 
       <!-- CARROSSEL -->
@@ -155,39 +155,39 @@
         </div>
       </div>
     </section>
-<section class="secao impacto" id="impacto">
-  <h2>Impacto positivo que vai além do alimento</h2>
-  <p class="subtitulo">
-    A Urban Life conecta pessoas, produtores e cidades de forma mais
-    sustentável, justa e transparente.
-  </p>
-
-  <div class="grid-impacto">
-    <div class="card-impacto">
-      <h3>🌱 Sustentabilidade</h3>
-      <p>
-        Reduzimos a pegada de carbono ao aproximar o consumidor de produtores
-        urbanos locais, evitando longas cadeias de transporte.
+    <section class="secao impacto" id="impacto">
+      <h2>Impacto positivo que vai além do alimento</h2>
+      <p class="subtitulo">
+        A Urban Life conecta pessoas, produtores e cidades de forma mais
+        sustentável, justa e transparente.
       </p>
-    </div>
 
-    <div class="card-impacto">
-      <h3>🤝 Impacto social</h3>
-      <p>
-        Fortalecemos pequenos produtores urbanos, gerando renda local e
-        promovendo inclusão econômica nas cidades.
-      </p>
-    </div>
+      <div class="grid-impacto">
+        <div class="card-impacto">
+          <h3>🌱 Sustentabilidade</h3>
+          <p>
+            Reduzimos a pegada de carbono ao aproximar o consumidor de
+            produtores urbanos locais, evitando longas cadeias de transporte.
+          </p>
+        </div>
 
-    <div class="card-impacto">
-      <h3>🍃 Qualidade & confiança</h3>
-      <p>
-        Alimentos mais frescos, rastreáveis e com transparência sobre origem,
-        cultivo e práticas sustentáveis.
-      </p>
-    </div>
-  </div>
-</section>
+        <div class="card-impacto">
+          <h3>🤝 Impacto social</h3>
+          <p>
+            Fortalecemos pequenos produtores urbanos, gerando renda local e
+            promovendo inclusão econômica nas cidades.
+          </p>
+        </div>
+
+        <div class="card-impacto">
+          <h3>🍃 Qualidade & confiança</h3>
+          <p>
+            Alimentos mais frescos, rastreáveis e com transparência sobre
+            origem, cultivo e práticas sustentáveis.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- PRODUTOS -->
     <section class="secao" id="produtos">
@@ -196,6 +196,35 @@
     </section>
 
     <script src="./js/main.js"></script>
+
+    <!-- MODAL PRODUTO -->
+    <div class="modal-overlay" id="modal-produto">
+      <div class="modal-card">
+        <button class="modal-close" id="fechar-modal">×</button>
+
+        <div class="modal-img">
+          <img id="modal-img" src="" alt="Produto" />
+        </div>
+
+        <div class="modal-info">
+          <h3 id="modal-nome"></h3>
+          <span class="modal-tipo" id="modal-tipo"></span>
+          <p class="modal-preco" id="modal-preco"></p>
+
+          <p class="modal-desc" id="modal-desc"></p>
+
+          <div class="modal-extra">
+            <strong>🌱 Como é cultivado</strong>
+            <p id="modal-cultivo"></p>
+
+            <strong>👩‍🌾 Produtor</strong>
+            <p id="modal-produtor"></p>
+          </div>
+
+          <button class="btn-solid modal-btn">Reservar</button>
+        </div>
+      </div>
+    </div>
 
     <div class="toast" id="toast">Pedido registrado com sucesso 🌱</div>
   </body>

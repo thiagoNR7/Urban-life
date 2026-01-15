@@ -810,5 +810,276 @@ a {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   MARKETPLACE
+========================= */
+
+.marketplace-hero {
+  text-align: center;
+  background: linear-gradient(180deg, #e8f5e9, #ffffff);
+  padding: 80px 20px 60px;
+}
+
+.marketplace-hero h1 {
+  font-size: 2.6rem;
+  color: var(--verde);
+  max-width: 720px;
+  margin: 0 auto 16px;
+}
+
+.marketplace-hero p {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* =========================
+   ESCOLHA DE TIPO
+========================= */
+
+.escolha-tipo {
+  padding: 60px 20px;
+}
+
+.botoes-tipo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-tipo {
+  background: #f6f6f6;
+  border-radius: 28px;
+  padding: 22px 28px;
+  min-width: 240px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.btn-tipo small {
+  display: block;
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 6px;
+}
+
+.btn-tipo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.btn-tipo.ativo {
+  background: #e8f5e9;
+  border-color: var(--verde);
+}
+
+/* =========================
+   GRID DE PRODUTOS
+========================= */
+
+.produtos-marketplace {
+  background: #f9fbf9;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* CARD PRODUTO */
+.card-produto {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-produto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(0,0,0,0.12);
+}
+
+/* IMAGEM */
+.produto-img {
+  height: 180px;
+  background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+}
+
+/* INFO */
+.produto-info {
+  padding: 18px 20px 22px;
+}
+
+.produto-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: var(--escuro);
+}
+
+.produto-info .meta {
+  font-size: 0.85rem;
+  color: #00a36c;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.produto-info .preco {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.produto-info button {
+  width: 100%;
+}
+
+/* TAGS */
+.card-produto.in-natura::after {
+  content: "🌱 Agroecológico";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #1b5e20;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 14px;
+}
+
+.card-produto.processado::after {
+  content: "🫙 Artesanal";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #00c48c;
+  color: #0f1f14;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 14px;
+}
+
+/* =========================
+   EDUCAÇÃO
+========================= */
+
+.educacao {
+  background: #ffffff;
+  text-align: center;
+}
+
+.educacao h2 {
+  font-size: 2.2rem;
+  color: var(--verde);
+  margin-bottom: 36px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 600px) {
+  .marketplace-hero h1 {
+    font-size: 2rem;
+  }
+
+  .produto-img {
+    height: 150px;
+  }
+}
+/* =========================
+   MODAL PRODUTO
+========================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,31,20,.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-overlay.ativo {
+  display: flex;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 24px;
+  max-width: 760px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 32px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.modal-img img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.modal-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.modal-tipo {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #1b5e20;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: .75rem;
+  margin-bottom: 12px;
+}
+
+.modal-preco {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.modal-desc {
+  font-size: .95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.modal-extra strong {
+  display: block;
+  margin-top: 12px;
+}
+
+.modal-btn {
+  margin-top: 24px;
+  width: 100%;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .modal-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 

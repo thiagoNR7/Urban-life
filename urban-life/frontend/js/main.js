@@ -105,3 +105,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+const modal = document.getElementById("modal-produto");
+const fecharModal = document.getElementById("fechar-modal");
+
+function abrirModalProduto(produto) {
+  document.getElementById("modal-img").src = produto.img;
+  document.getElementById("modal-nome").innerText = produto.nome;
+  document.getElementById("modal-tipo").innerText = produto.tipo;
+  document.getElementById("modal-preco").innerText = `R$ ${produto.preco}`;
+  document.getElementById("modal-desc").innerText = produto.descricao;
+  document.getElementById("modal-cultivo").innerText = produto.cultivo;
+  document.getElementById("modal-produtor").innerText = produto.produtor;
+
+  modal.classList.add("ativo");
+}
+
+fecharModal.addEventListener("click", () => {
+  modal.classList.remove("ativo");
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.classList.remove("ativo");
+});
