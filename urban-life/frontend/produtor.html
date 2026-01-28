@@ -1,84 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Produtor | Urban Life</title>
-  <link rel="stylesheet" href="./css/produtor.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtor | Urban Life</title>
+    <link rel="stylesheet" href="./css/produtor.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="produtor-nav">
+      <a href="./produtores.html">← Voltar aos produtores</a>
+      <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life" />
+    </nav>
 
-<nav class="produtor-nav">
-  <div class="nav-left">
-    <a href="./index.html" class="nav-back">← Voltar</a>
-  </div>
+    <!-- RESUMO DA CESTA -->
+    <section class="cesta-resumo">
+      <h3>Cesta selecionada</h3>
+      <div class="cesta-box">
+        <strong>Cesta Urban Life – Média</strong>
+        <span>Escolha até <b>9 itens</b></span>
+        <span
+          >Itens escolhidos: <b><span id="contador-itens">0</span> / 9</b></span
+        >
+      </div>
+    </section>
 
-  <div class="nav-center">
-    <img src="./imgs/WhatsApp Image 2026-01-15 at 10.08.56 (3).jpeg" alt="Produtor" class="nav-avatar">
-    <div class="nav-info">
-      <strong>Horta Vila Verde</strong>
-      <span class="status ativo">● Ativo agora</span>
+    <!-- PRODUTOR -->
+    <header class="produtor-header">
+      <img
+        src="./imgs/Captura de tela 2026-01-15 191743.png"
+        alt="Produtor"
+        class="produtor-avatar"
+      />
+
+      <div class="produtor-info">
+        <h1>Horta Vila Verde</h1>
+        <p>
+          Produtor urbano localizado na Zona Sul, com cultivo agroecológico,
+          colheita semanal e foco em alimentos frescos e sazonais.
+        </p>
+
+        <div class="produtor-tags">
+          <span>🌱 Agroecológico</span>
+          <span>📍 Zona Sul</span>
+          <span>🚲 Entrega por rota</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- PRODUTOS -->
+    <section class="produtos-section">
+      <h2>Produtos disponíveis</h2>
+
+      <div class="grid-produtos">
+        <!-- CARD -->
+        <div class="produto-card">
+          <img src="./imgs/verdura2.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+
+        <div class="produto-card">
+          <img src="./imgs/tomate1.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+
+        <div class="produto-card">
+          <img src="./imgs/morango.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+
+        <div class="produto-card">
+          <img src="./imgs/morango.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/verdura2.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/morango.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/morango.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/verdura2.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/morango.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/verdura2.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/verdura2.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/tomate1.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/morango.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="./imgs/morango.jpg" alt="Alface" />
+
+          <h4>Alface Crespa</h4>
+          <span class="preco">R$ 4,50</span>
+
+          <div class="produto-controle">
+            <button class="btn-remove">−</button>
+            <span class="qtd-produto">0</span>
+            <button class="btn-add">+</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER AÇÃO -->
+    <footer class="produtor-footer">
+      <button class="btn-avancar">Continuar para revisão da cesta</button>
+    </footer>
+
+    <!-- BARRA DA CESTA – RODAPÉ -->
+    <div class="cesta-bar bottom" id="cestaBar">
+      <div class="cesta-info">
+        <strong>Cesta Média</strong>
+        <span><span id="cestaQtd">0</span> / 9 itens</span>
+      </div>
+
+      <div class="cesta-progress">
+        <div class="cesta-progress-fill" id="cestaProgress"></div>
+      </div>
+
+      <button class="btn-continuar" id="btnContinuar" disabled>
+        Continuar
+      </button>
     </div>
-  </div>
 
-  <div class="nav-right">
-    <a href="#produtos" class="nav-link">Produtos</a>
-    <a href="#dashboard" class="nav-link destaque">Dashboard</a>
-  </div>
-</nav>
-
-
-<header class="produtor-header">
-  <img src="./imgs/Captura de tela 2026-01-15 191743.png" alt="Produtor">
-  <div>
-    <h2>Horta Vila Verde</h2>
-    <span class="status">🟢 Ativo agora</span>
-    <p>Zona Sul • São Paulo</p>
-  </div>
-</header>
-
-<main class="produtor-layout">
-
-  <!-- MAPA -->
-  <section class="produtor-mapa">
-    <h3>Localização da horta</h3>
-
-    <!-- MVP: mapa simples -->
-    <iframe 
-      src="https://www.google.com/maps?q=-23.6231,-46.6986&z=14&output=embed"
-      loading="lazy">
-    </iframe>
-  </section>
-
-  <!-- DASHBOARD -->
-  <section class="produtor-dashboard">
-    <h3>Resumo</h3>
-
-    <div class="dashboard-grid">
-      <div class="dash-card">
-        <strong>12</strong>
-        <span>Produtos ativos</span>
-      </div>
-
-      <div class="dash-card">
-        <strong>Tomate</strong>
-        <span>Mais vendido</span>
-      </div>
-
-      <div class="dash-card">
-        <strong>18</strong>
-        <span>Pedidos hoje</span>
-      </div>
-
-      <div class="dash-card">
-        <strong>4.8 ⭐</strong>
-        <span>Avaliação</span>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<script src="./js/produtor.js"></script>
-</body>
+    <script src="./js/produtor.js"></script>
+  </body>
 </html>

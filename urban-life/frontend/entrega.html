@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entrega | Urban Life</title>
+  <link rel="stylesheet" href="./css/entrega.css" />
+</head>
+<body>
+
+<nav class="entrega-nav">
+  <a href="./revisao-cesta.html">← Voltar à revisão</a>
+  <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life" />
+</nav>
+
+<main class="entrega-container">
+
+  <h1>Escolha sua região de entrega</h1>
+  <p class="sub">
+    Entregamos por bairros, em dias fixos.  
+    Assim conseguimos manter o frete baixo e os alimentos sempre frescos 🌱
+  </p>
+
+  <section class="regioes">
+
+    <!-- ZONA NORTE -->
+    <div class="regiao-card norte">
+      <h3>Zona Norte</h3>
+      <p class="dias">Entregas: <strong>Terça ou Sexta</strong></p>
+
+      <p class="bairros">
+        Tucuruvi, Jaçanã, Vila Maria, Santana, Casa Verde, Limão,
+        Mandaqui, Tremembé, Imirim, Freguesia do Ó, Brasilândia,
+        Vila Guilherme, Vila Medeiros, Pirituba, Perus,
+        Jaraguá, Cachoeirinha, Lauzane Paulista, Jardim São Paulo
+      </p>
+
+      <div class="acoes">
+        <button onclick="selecionarRegiao('Zona Norte','Terça')">Terça</button>
+        <button onclick="selecionarRegiao('Zona Norte','Sexta')">Sexta</button>
+      </div>
+    </div>
+
+    <!-- CENTRO -->
+    <div class="regiao-card centro">
+      <h3>Centro</h3>
+      <p class="dias">Entregas: <strong>Quarta ou Sábado</strong></p>
+
+      <p class="bairros">
+        Sé, República, Consolação, Bela Vista, Liberdade,
+        Aclimação, Santa Cecília, Higienópolis, Cambuci,
+        Bom Retiro, Brás, Pari, Luz, Barra Funda,
+        Vila Buarque, Campos Elíseos, Santa Ifigênia
+      </p>
+
+      <div class="acoes">
+        <button onclick="selecionarRegiao('Centro','Quarta')">Quarta</button>
+        <button onclick="selecionarRegiao('Centro','Sábado')">Sábado</button>
+      </div>
+    </div>
+
+    <!-- ZONA LESTE -->
+    <div class="regiao-card leste">
+      <h3>Zona Leste</h3>
+      <p class="dias">Entregas: <strong>Quinta ou Domingo</strong></p>
+
+      <p class="bairros">
+        Tatuapé, Mooca, Vila Prudente, Penha, Vila Matilde,
+        Carrão, Itaquera, Artur Alvim, São Mateus,
+        São Miguel Paulista, Ermelino Matarazzo,
+        Vila Formosa, Água Rasa, Aricanduva,
+        Anália Franco, Belém, Ponte Rasa
+      </p>
+
+      <div class="acoes">
+        <button onclick="selecionarRegiao('Zona Leste','Quinta')">Quinta</button>
+        <button onclick="selecionarRegiao('Zona Leste','Domingo')">Domingo</button>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="./js/entrega.js"></script>
+</body>
+</html>

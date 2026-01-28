@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard do Produtor | Urban Life</title>
+  <link rel="stylesheet" href="./css/produtor-dashboard.css" />
+</head>
+<body>
+
+<nav class="dashboard-nav">
+  <div>
+    <strong>Horta Vila Verde</strong>
+    <small>Zona Sul • São Paulo</small>
+  </div>
+  <button id="logout" class="btn-outline">Sair</button>
+</nav>
+
+<main class="dashboard-container">
+
+  <!-- RESUMO -->
+  <section class="dashboard-resumo">
+    <div class="resumo-card">
+      <span>Pedidos hoje</span>
+      <strong id="qtd-hoje">0</strong>
+    </div>
+    <div class="resumo-card">
+      <span>Em preparo</span>
+      <strong id="qtd-preparo">0</strong>
+    </div>
+    <div class="resumo-card">
+      <span>Entregues</span>
+      <strong id="qtd-entregues">0</strong>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section class="dashboard-mapa">
+    <h3>Localização da horta (tempo real)</h3>
+    <iframe
+      src="https://maps.google.com/maps?q=São%20Paulo&t=&z=14&ie=UTF8&iwloc=&output=embed"
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- PEDIDOS -->
+  <section class="dashboard-pedidos">
+    <h3>Pedidos recentes</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Cliente</th>
+          <th>Produtos</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="lista-pedidos"></tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="./js/produtor-dashboard.js"></script>
+</body>
+</html>

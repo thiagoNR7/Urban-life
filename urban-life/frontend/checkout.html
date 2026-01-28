@@ -1,47 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkout | Urban Life</title>
   <link rel="stylesheet" href="./css/checkout.css" />
 </head>
 <body>
 
 <nav class="checkout-nav">
-  <a href="./marketplace.html">← Voltar ao marketplace</a>
-  <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life" />
+  <a href="./entrega.html">← Voltar</a>
+  <img src="./imgs/logo_Prancheta 1 cópia (1).png" />
 </nav>
 
 <main class="checkout-container">
 
-  <!-- FORMULÁRIO -->
   <section class="checkout-form">
     <h1>Endereço de entrega</h1>
 
-    <div class="checkout-animacao">
-      <span>🌱</span><span class="linha"></span>
-      <span>🚲</span><span class="linha"></span>
-      <span>🏠</span>
-    </div>
+    <form id="form-checkout">
+      <input required placeholder="Rua e número" />
+      <input required placeholder="Bairro" />
+      <input required placeholder="Cidade" />
+      <input required placeholder="CEP" />
 
-    <form id="form-endereco">
-      <input type="text" placeholder="Rua e número" required />
-      <input type="text" placeholder="Bairro" required />
-      <input type="text" placeholder="Cidade" required />
-      <input type="text" placeholder="CEP" required />
-
-      <button type="submit" class="btn-finalizar">
-        Confirmar endereço
+      <button type="submit" class="btn-finalizar">df
+        Ir para pagamento
       </button>
     </form>
   </section>
 
-  <!-- RESUMO -->
   <aside class="checkout-resumo">
-    <h3>Seu pedido</h3>
-    <ul id="resumo-itens"></ul>
-    <strong>Total: R$ <span id="resumo-total">0.00</span></strong>
+    <h3>Resumo</h3>
+
+    <p><strong>Região:</strong> <span id="resumo-regiao"></span></p>
+    <p><strong>Dia:</strong> <span id="resumo-dia"></span></p>
+    <p><strong>Frete:</strong> R$ <span id="resumo-frete"></span></p>
+
+    <hr />
+
+    <p class="total">
+      Total: R$ <strong id="resumo-total"></strong>
+    </p>
   </aside>
 
 </main>

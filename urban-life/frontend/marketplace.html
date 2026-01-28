@@ -1,183 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketplace | Urban Life</title>
-    <link rel="stylesheet" href="./css/marketplace.css" />
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <nav class="navbar-marketplace">
-      <a href="./index.html" class="nav-home">← Voltar para Home</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marketplace | Urban Life</title>
+  <link rel="stylesheet" href="./css/marketplace.css" />
+</head>
+<body>
 
-      <div class="nav-center">
-        <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life" />
-      </div>
+<nav class="navbar-marketplace">
+  <a href="./index.html">← Home</a>
+  <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life" />
+</nav>
 
-      <button id="cart-btn" class="cart-btn">
-        🛒 <span id="cart-count" class="cart-count">0</span>
-      </button>
-    </nav>
+<main class="marketplace-produtores">
+  <h1>Produtores disponíveis na sua região</h1>
 
-    <div class="marketplace-container">
-      <!-- SIDEBAR -->
-      <aside class="sidebar">
-        <h3>Filtros</h3>
+  <section class="grid-produtores">
 
-        <div class="filtro">
-          <strong>Tipo</strong>
-          <label><input type="checkbox" /> In natura</label>
-          <label><input type="checkbox" /> Processados</label>
-        </div>
+    <article class="produtor-card">
+      <img src="./imgs/produtor1.jpg" alt="Horta Vila Verde">
+      <h3>Horta Vila Verde</h3>
+      <p>Zona Sul • Entrega terça</p>
+      <a href="./produtor.html?id=vila-verde" class="btn-ver">Ver produtos</a>
+    </article>
 
-        <div class="filtro">
-          <strong>Preço</strong>
-          <input type="range" min="0" max="100" />
-        </div>
+    <article class="produtor-card">
+      <img src="./imgs/produtor2.jpg" alt="Raízes Urbanas">
+      <h3>Raízes Urbanas</h3>
+      <p>Zona Oeste • Entrega quinta</p>
+      <a href="./produtor.html?id=raizes-urbanas" class="btn-ver">Ver produtos</a>
+    </article>
 
-        <button class="btn-aplicar">Aplicar filtros</button>
-      </aside>
+    <article class="produtor-card">
+      <img src="./imgs/produtor3.jpg" alt="Prato Verde">
+      <h3>Prato Verde Sustentável</h3>
+      <p>Zona Norte • Entrega sábado</p>
+      <a href="./produtor.html?id=prato-verde" class="btn-ver">Ver produtos</a>
+    </article>
 
-      <!-- CONTEÚDO -->
-      <main class="conteudo">
-        <header class="marketplace-header">
-          <h1>Mercado Urbano</h1>
-          <p>
-            Compare produtores, preços e escolha alimentos agroecológicos perto
-            de você.
-          </p>
-        </header>
+  </section>
+</main>
 
-        <!-- GRID PRODUTOS -->
-        <section class="grid-produtos">
-          <!-- PRODUTO -->
-          <article class="produto-card">
-            <img src="./imgs/tomate1.jpg" alt="Tomate" />
-            <h4>Tomate Agroecológico</h4>
-            <span class="preco">R$ 12,50</span>
-            <small>Horta Vila Verde</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-
-          <article class="produto-card">
-            <img src="./imgs/verdura2.jpg" alt="Folhas" />
-            <h4>Mix de Folhas</h4>
-            <span class="preco">R$ 8,90</span>
-            <small>Raízes Urbanas</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-
-          <article class="produto-card">
-            <img src="./imgs/morango.jpg" alt="Morango" />
-            <h4>Morango Fresco</h4>
-            <span class="preco">R$ 15,00</span>
-            <small>Pomar da Cidade</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-
-          <article class="produto-card">
-            <img src="./imgs/pao.jpg" alt="Pão" />
-            <h4>Pão Integral Artesanal</h4>
-            <span class="preco">R$ 10,00</span>
-            <small>Padaria Urbana</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-          <article class="produto-card">
-            <img src="./imgs/pao.jpg" alt="Pão" />
-            <h4>Pão Integral Artesanal</h4>
-            <span class="preco">R$ 10,00</span>
-            <small>Padaria Urbana</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-          <article class="produto-card">
-            <img src="./imgs/pao.jpg" alt="Pão" />
-            <h4>Pão Integral Artesanal</h4>
-            <span class="preco">R$ 10,00</span>
-            <small>Padaria Urbana</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-          <article class="produto-card">
-            <img src="./imgs/pao.jpg" alt="Pão" />
-            <h4>Pão Integral Artesanal</h4>
-            <span class="preco">R$ 10,00</span>
-            <small>Padaria Urbana</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-          <article class="produto-card">
-            <img src="./imgs/pao.jpg" alt="Pão" />
-            <h4>Pão Integral Artesanal</h4>
-            <span class="preco">R$ 10,00</span>
-            <small>Padaria Urbana</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-          <article class="produto-card">
-            <img src="./imgs/pao.jpg" alt="Pão" />
-            <h4>Pão Integral Artesanal</h4>
-            <span class="preco">R$ 10,00</span>
-            <small>Padaria Urbana</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-          <article class="produto-card">
-            <img src="./imgs/pao.jpg" alt="Pão" />
-            <h4>Pão Integral Artesanal</h4>
-            <span class="preco">R$ 10,00</span>
-            <small>Padaria Urbana</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-          <article class="produto-card">
-            <img src="./imgs/pao.jpg" alt="Pão" />
-            <h4>Pão Integral Artesanal</h4>
-            <span class="preco">R$ 10,00</span>
-            <small>Padaria Urbana</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-          <article class="produto-card">
-            <img src="./imgs/pao.jpg" alt="Pão" />
-            <h4>Pão Integral Artesanal</h4>
-            <span class="preco">R$ 10,00</span>
-            <small>Padaria Urbana</small>
-            <button class="btn-card">Adicionar ao carrinho</button>
-          </article>
-        </section>
-      </main>
-    </div>
-
-    <!-- CARRINHO -->
-    <div class="cart-drawer" id="cart-drawer">
-      <h3>Seu carrinho</h3>
-
-      <ul id="cart-items"></ul>
-
-      <div class="cart-footer">
-        <strong>Total: R$ <span id="cart-total">0.00</span></strong>
-        <button id="abrir-entrega" class="btn-finalizar">
-          Finalizar compra
-        </button>
-      </div>
-    </div>
-
-    <!-- MODAL ENTREGA -->
-    <div class="modal-overlay" id="modal-entrega">
-      <div class="modal-entrega">
-        <h2>Entrega estimada 🌱</h2>
-
-        <p>Seu pedido chega em aproximadamente:</p>
-
-        <div class="tempo-entrega">
-          <span id="tempo-entrega">25</span>
-          <small>minutos</small>
-        </div>
-
-        <div class="modal-acoes">
-          <button id="cancelar-entrega" class="btn-secundario">Cancelar</button>
-          <button id="confirmar-entrega" class="btn-confirmar">
-            Confirmar pedido
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <script src="./js/marketplace.js"></script>
-  </body>
+</body>
 </html>

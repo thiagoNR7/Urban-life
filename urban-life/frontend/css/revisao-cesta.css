@@ -1,0 +1,212 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: #f4f7f4;
+  color: #1b1b1b;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.revisao-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(90deg, #0f1f14, #1b5e20);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.revisao-nav a {
+  color: #ffffff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.revisao-nav a:hover {
+  opacity: 1;
+}
+
+.revisao-nav img {
+  height: 36px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.revisao-container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.revisao-container h1 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: #1b5e20;
+}
+
+/* =========================
+   INFO DA CESTA
+========================= */
+.revisao-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  margin-bottom: 32px;
+}
+
+.revisao-info div span {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.revisao-info div strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   LISTA DE PRODUTOS
+========================= */
+.lista-produtos {
+  list-style: none;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  margin-bottom: 24px;
+}
+
+.item-produto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-produto:last-child {
+  border-bottom: none;
+}
+
+.item-produto strong {
+  font-size: 0.95rem;
+}
+
+.item-produto span {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* remover */
+.btn-remover {
+  background: #f3f3f3;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-remover:hover {
+  background: #ffdede;
+  color: #b00000;
+}
+
+/* =========================
+   TOTAL
+========================= */
+.resumo-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  margin-bottom: 32px;
+}
+
+.resumo-total span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.resumo-total strong {
+  font-size: 1.4rem;
+  color: #1b5e20;
+}
+
+/* =========================
+   AÇÕES
+========================= */
+.revisao-acoes {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.btn-voltar {
+  flex: 1;
+  padding: 14px;
+  border-radius: 16px;
+  background: #e8f0ea;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1b5e20;
+  transition: background 0.25s ease;
+}
+
+.btn-voltar:hover {
+  background: #dce9e1;
+}
+
+.btn-avancar {
+  flex: 1;
+  padding: 14px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #00c48c, #1b5e20);
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-avancar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,196,140,0.35);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 600px) {
+  .revisao-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .revisao-acoes {
+    flex-direction: column;
+  }
+}

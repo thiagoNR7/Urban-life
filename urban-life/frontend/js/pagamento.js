@@ -1,17 +1,46 @@
-const metodos = document.querySelectorAll(".metodo");
-const boxes = document.querySelectorAll(".pagamento-box");
-const btn = document.getElementById("confirmar-pagamento");
 
-metodos.forEach(btnMetodo => {
-  btnMetodo.addEventListener("click", () => {
-    metodos.forEach(m => m.classList.remove("ativo"));
-    boxes.forEach(b => b.classList.remove("ativo"));
 
-    btnMetodo.classList.add("ativo");
-    document.getElementById(btnMetodo.dataset.metodo).classList.add("ativo");
+// =========================
+// PAGAMENTO – UX SIMPLES
+// =========================
+
+const opcoes = document.querySelectorAll(".opcao");
+const btnConfirmar = document.getElementById("confirmar-pagamento");
+const resumoItens = document.getElementById("resumo-itens");
+const resumoTotal = document.getElementById("resumo-total");
+
+// carrega carrinho do checkout
+const cart = JSON.parse(sessionStorage.getItem("urbanlife_checkout")) || [];
+
+// resumo
+let total = 0;
+cart.forEach(item => {
+  total += item.preco * item.qtd;
+
+  const li = document.createElement("li");
+  li.innerText = `${item.nome} x${item.qtd}`;
+  resumoItens.appendChild(li);
+});
+
+resumoTotal.innerText = total.toFixed(2);
+
+// seleção método
+opcoes.forEach(opcao => {
+  opcao.addEventListener("click", () => {
+    opcoes.forEach(o => o.classList.remove("ativo"));
+    opcao.classList.add("ativo");
   });
 });
 
-btn.addEventListener("click", () => {
+// confirmar
+btnConfirmar.addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Carrinho vazio");
+    return;
+  }
+
+  // limpa tudo
+  sessionStorage.removeItem("urbanlife_checkout");
+
   window.location.href = "./pedido.html";
 });

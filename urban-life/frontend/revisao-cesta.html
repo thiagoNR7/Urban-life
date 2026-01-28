@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revisão da cesta | Urban Life</title>
+
+    <!-- CSS DA REVISÃO -->
+    <link rel="stylesheet" href="./css/revisao-cesta.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="revisao-nav">
+      <a href="./produtor.html">← Voltar ao produtor</a>
+      <img src="./imgs/logo_Prancheta 1 cópia (1).png" alt="Urban Life" />
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <main class="revisao-container">
+
+      <h1>Revisão da sua cesta</h1>
+
+      <!-- INFORMAÇÕES DA CESTA -->
+      <section class="revisao-info">
+        <div>
+          <span>Cesta escolhida</span>
+          <strong>Cesta Urban Life – Média</strong>
+        </div>
+
+        <div>
+          <span>Produtor</span>
+          <strong>Horta Vila Verde</strong>
+        </div>
+
+        <div>
+          <span>Região</span>
+          <strong>Zona Sul</strong>
+        </div>
+
+        <div>
+          <span>Dia de entrega</span>
+          <strong>Terça-feira</strong>
+        </div>
+      </section>
+
+      <!-- LISTA DE PRODUTOS -->
+      <ul id="listaProdutos"></ul>
+
+
+      
+
+        <!-- JS VAI RENDERIZAR AQUI -->
+
+        <!-- EXEMPLO VISUAL (pode apagar depois) -->
+        <!--
+        <li class="item-produto">
+          <div>
+            <strong>Alface Crespa</strong>
+            <span>Quantidade: 2</span>
+          </div>
+          <button class="btn-remover">Remover</button>
+        </li>
+        -->
+      </ul>
+
+      <!-- TOTAL -->
+      <div class="resumo-total">
+        Total: R$ <strong><span id="totalCesta">0.00</strong>
+      </div>
+
+      <!-- AÇÕES -->
+      <div class="revisao-acoes">
+        <button class="btn-voltar" onclick="window.location.href='./produtor.html'">
+          Voltar e ajustar produtos
+        </button>
+
+        <button class="btn-avancar" id="btn-ir-checkout">
+          Continuar para entrega 
+        </button>
+      </div>
+
+    </main>
+
+    <!-- JS DA REVISÃO -->
+    <script src="./js/revisao-cesta.js"></script>
+  </body>
+</html>
